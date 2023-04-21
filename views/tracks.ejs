@@ -1,0 +1,12 @@
+<% allTracks.forEach((track) => { %>
+<h2><%= track.name %></h2>
+<% if(track.preview_url !== null) { %>
+<audio
+  controls="controls"
+  id="<%= track.id %>"
+  src="<%= track.preview_url %>"
+></audio>
+
+<% } else { %>
+<h3>No preview track</h3>
+<% } %> <% }) %>

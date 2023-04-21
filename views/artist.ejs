@@ -1,0 +1,15 @@
+<div class="container">
+  <% artistAll.forEach(artist => { %>
+  <h3><%= artist.name %></h3>
+  <% if(artist.images.length === 0){ %>
+  <img
+    src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/05/11167spotify-logo-1920x1080-2.jpg"
+    alt="image"
+  />
+  <% } else { %>
+  <img src="<%= artist.images[0].url %>" alt="image" />
+  <% } %>
+  <a href=<%- `/albums/${artist.id} `%>>View Albums</a>
+<% }) %>
+  
+</div>
